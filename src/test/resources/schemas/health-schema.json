@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MoonLabHealthResponse",
+  "type": "object",
+  "required": ["status", "service", "version", "database"],
+  "properties": {
+    "status": { "type": "string", "const": "ok" },
+    "service": { "type": "string", "const": "moon-lab-server" },
+    "version": { "type": "string", "minLength": 1 },
+    "database": {
+      "type": "object",
+      "required": ["db_name", "db_user", "server_time"],
+      "properties": {
+        "db_name": { "type": "string", "const": "moon_lab" },
+        "db_user": { "type": "string", "const": "moon_admin" },
+        "server_time": { "type": "string", "minLength": 10 }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MoonLabAuthLoginResponse",
+  "type": "object",
+  "required": ["access_token", "token_type", "expires_in", "channel", "user"],
+  "properties": {
+    "access_token": { "type": "string", "minLength": 20 },
+    "token_type": { "type": "string" },
+    "expires_in": { "type": ["string", "number"] },
+    "channel": { "type": "string" },
+    "user": {
+      "type": "object",
+      "required": ["id", "email", "fullName", "userType", "roleCode", "permissions", "status"],
+      "properties": {
+        "id": { "type": "integer" },
+        "email": { "type": "string" },
+        "fullName": { "type": "string" },
+        "userType": { "type": "string" },
+        "roleCode": { "type": "string" },
+        "permissions": { "type": "array", "items": { "type": "string" } },
+        "status": { "type": "string" }
+      }
+    }
+  }
+}
