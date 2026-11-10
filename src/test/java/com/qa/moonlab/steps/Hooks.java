@@ -1,7 +1,7 @@
-package com.qa.template.steps;
+package com.qa.moonlab.steps;
 
-import com.qa.template.driver.DriverFactory;
-import com.qa.template.mobile.MobileApkJavaHelper;
+import com.qa.moonlab.driver.DriverFactory;
+import com.qa.moonlab.mobile.MobileApkJavaHelper;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import io.qameta.allure.Allure;

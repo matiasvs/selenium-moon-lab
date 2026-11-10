@@ -1,12 +1,12 @@
-package com.qa.template.steps.sample;
+package com.qa.moonlab.steps.sample;
 
-import com.qa.template.api.RestAssuredHelper;
-import com.qa.template.config.EnvConfig;
-import com.qa.template.context.TestContext;
-import com.qa.template.db.DatabaseHelper;
-import com.qa.template.driver.DriverFactory;
-import com.qa.template.pages.sample.SampleLoginPage;
-import com.qa.template.performance.K6RunnerHelper;
+import com.qa.moonlab.api.RestAssuredHelper;
+import com.qa.moonlab.config.EnvConfig;
+import com.qa.moonlab.context.TestContext;
+import com.qa.moonlab.db.DatabaseHelper;
+import com.qa.moonlab.driver.DriverFactory;
+import com.qa.moonlab.pages.sample.SampleLoginPage;
+import com.qa.moonlab.performance.K6RunnerHelper;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

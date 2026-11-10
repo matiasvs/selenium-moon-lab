@@ -1,9 +1,9 @@
-package com.qa.template.db;
+package com.qa.moonlab.db;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.qa.template.config.EnvConfig;
-import com.qa.template.driver.DriverFactory;
-import com.qa.template.pages.BasePage;
+import com.qa.moonlab.config.EnvConfig;
+import com.qa.moonlab.driver.DriverFactory;
+import com.qa.moonlab.pages.BasePage;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import io.qameta.allure.Allure;

@@ -1,7 +1,7 @@
-package com.qa.template.pages.sample;
+package com.qa.moonlab.pages.sample;
 
-import com.qa.template.config.EnvConfig;
-import com.qa.template.pages.BasePage;
+import com.qa.moonlab.config.EnvConfig;
+import com.qa.moonlab.pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

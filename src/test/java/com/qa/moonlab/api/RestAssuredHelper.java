@@ -1,8 +1,8 @@
-package com.qa.template.api;
+package com.qa.moonlab.api;
 
-import com.qa.template.config.EnvConfig;
-import com.qa.template.driver.DriverFactory;
-import com.qa.template.pages.BasePage;
+import com.qa.moonlab.config.EnvConfig;
+import com.qa.moonlab.driver.DriverFactory;
+import com.qa.moonlab.pages.BasePage;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;

@@ -1,4 +1,4 @@
-package com.qa.template.pages;
+package com.qa.moonlab.pages;
 
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.*;

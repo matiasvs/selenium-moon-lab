@@ -1,10 +1,10 @@
-package com.qa.template.steps.auth;
+package com.qa.moonlab.steps.auth;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.qa.template.api.RestAssuredHelper;
-import com.qa.template.config.EnvConfig;
-import com.qa.template.context.TestContext;
-import com.qa.template.db.DatabaseHelper;
+import com.qa.moonlab.api.RestAssuredHelper;
+import com.qa.moonlab.config.EnvConfig;
+import com.qa.moonlab.context.TestContext;
+import com.qa.moonlab.db.DatabaseHelper;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

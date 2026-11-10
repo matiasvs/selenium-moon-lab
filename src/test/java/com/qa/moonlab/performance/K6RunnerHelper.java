@@ -1,7 +1,7 @@
-package com.qa.template.performance;
+package com.qa.moonlab.performance;
 
-import com.qa.template.driver.DriverFactory;
-import com.qa.template.pages.BasePage;
+import com.qa.moonlab.driver.DriverFactory;
+import com.qa.moonlab.pages.BasePage;
 import io.qameta.allure.Allure;
 
 import java.io.BufferedReader;

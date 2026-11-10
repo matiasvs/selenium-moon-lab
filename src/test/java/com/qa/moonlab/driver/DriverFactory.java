@@ -1,6 +1,6 @@
-package com.qa.template.driver;
+package com.qa.moonlab.driver;
 
-import com.qa.template.config.EnvConfig;
+import com.qa.moonlab.config.EnvConfig;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;

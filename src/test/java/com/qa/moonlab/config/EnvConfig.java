@@ -1,4 +1,4 @@
-package com.qa.template.config;
+package com.qa.moonlab.config;
 
 import io.github.cdimascio.dotenv.Dotenv;
 

@@ -7,7 +7,7 @@
     <!-- ===================================================================== -->
     <!-- 1. PROJECT METADATA (Change only these 3 lines when starting a new one) -->
     <!-- ===================================================================== -->
-    <groupId>com.qa.template</groupId>
+    <groupId>com.qa.moonlab</groupId>
     <artifactId>qa-selenium-cucumber-restassured-template</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>

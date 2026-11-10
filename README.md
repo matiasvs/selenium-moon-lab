@@ -25,7 +25,7 @@ sudo apt update && sudo apt install -y openjdk-21-jdk maven
 ### Step 3 — Customize the Project Name in [`pom.xml`](pom.xml)
 Open [`pom.xml`](pom.xml) and edit only these lines at the top of the file:
 ```xml
-<groupId>com.qa.template</groupId>
+<groupId>com.qa.moonlab</groupId>
 <artifactId>your-qa-project-name</artifactId>
 <version>1.0.0-SNAPSHOT</version>
 <name>QA Suite - Your Project Name</name>
@@ -72,8 +72,8 @@ Feature: User Management
     Then the database responds properly to the verification query "SELECT id, email FROM users WHERE email = 'qa.user@example.com'"
 ```
 
-### 2. Create your Page Object extending [`BasePage.java`](src/test/java/com/qa/template/pages/BasePage.java)
-Duplicate [`SampleLoginPage.java`](src/test/java/com/qa/template/pages/sample/SampleLoginPage.java) inside `src/test/java/com/qa/template/pages/<module>/`:
+### 2. Create your Page Object extending [`BasePage.java`](src/test/java/com/qa/moonlab/pages/BasePage.java)
+Duplicate [`SampleLoginPage.java`](src/test/java/com/qa/moonlab/pages/sample/SampleLoginPage.java) inside `src/test/java/com/qa/moonlab/pages/<module>/`:
 - **Do not use `Thread.sleep()` or direct `driver.findElement()` calls**.
 - Use the inherited `BasePage` methods that apply **`wait.until(ExpectedConditions...)`** over `FluentWait` and project each action onto the **browser's `12vh` Dual-Panel HUD**:
   - `clickElement(By locator, String description)`
@@ -83,13 +83,13 @@ Duplicate [`SampleLoginPage.java`](src/test/java/com/qa/template/pages/sample/Sa
   - `selectCustomDropdownOption(By trigger, By option, String description)`
   - `inspectDisabledElement(By disabledButton, String reasonPrefix, By optionalRow)`
 
-### 3. Create or reuse Steps in `src/test/java/com/qa/template/steps/<module>/`
-Use [`SampleTemplateSteps.java`](src/test/java/com/qa/template/steps/sample/SampleTemplateSteps.java) as a baseline:
+### 3. Create or reuse Steps in `src/test/java/com/qa/moonlab/steps/<module>/`
+Use [`SampleTemplateSteps.java`](src/test/java/com/qa/moonlab/steps/sample/SampleTemplateSteps.java) as a baseline:
 - **For Web UI (Selenium)**: Instantiate your Page Object passing `DriverFactory.getDriver()`.
-- **For REST API (RestAssured)**: Call `RestAssuredHelper.sendRequest(title, method, path, token, jsonBody, headers)` (see [`RestAssuredHelper.java`](src/test/java/com/qa/template/api/RestAssuredHelper.java)).
-- **For Database (PostgreSQL / MySQL / Oracle / SQL Server / MariaDB)**: Call `DatabaseHelper.queryList(title, sql, params...)` (see [`DatabaseHelper.java`](src/test/java/com/qa/template/db/DatabaseHelper.java)).
-- **For Mobile `.apk` Tests (3 Modes: Appium, ADB CLI, or Hybrid Combo with 3D QR Camera)**: Use [`MobileApkJavaHelper.java`](src/test/java/com/qa/template/mobile/MobileApkJavaHelper.java).
-- **For Grafana k6 Load Tests from Selenium**: Use [`K6RunnerHelper.java`](src/test/java/com/qa/template/performance/K6RunnerHelper.java).
+- **For REST API (RestAssured)**: Call `RestAssuredHelper.sendRequest(title, method, path, token, jsonBody, headers)` (see [`RestAssuredHelper.java`](src/test/java/com/qa/moonlab/api/RestAssuredHelper.java)).
+- **For Database (PostgreSQL / MySQL / Oracle / SQL Server / MariaDB)**: Call `DatabaseHelper.queryList(title, sql, params...)` (see [`DatabaseHelper.java`](src/test/java/com/qa/moonlab/db/DatabaseHelper.java)).
+- **For Mobile `.apk` Tests (3 Modes: Appium, ADB CLI, or Hybrid Combo with 3D QR Camera)**: Use [`MobileApkJavaHelper.java`](src/test/java/com/qa/moonlab/mobile/MobileApkJavaHelper.java).
+- **For Grafana k6 Load Tests from Selenium**: Use [`K6RunnerHelper.java`](src/test/java/com/qa/moonlab/performance/K6RunnerHelper.java).
 
 ---
 
@@ -131,7 +131,7 @@ selenium-moon-lab/
 ├── README.md                                  # Quick-start guide and architecture reference
 ├── pom.xml                                    # Centralized Maven dependencies
 └── src/test/
-    ├── java/com/qa/template/
+    ├── java/com/qa/moonlab/
     │   ├── config/EnvConfig.java              # Automatic .env and Maven -D properties reader
     │   ├── context/TestContext.java           # Shared context across Steps (PicoContainer)
     │   ├── driver/DriverFactory.java          # ThreadLocal<WebDriver> with Selenium Manager
